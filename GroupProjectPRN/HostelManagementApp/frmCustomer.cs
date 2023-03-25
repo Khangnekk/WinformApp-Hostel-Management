@@ -166,6 +166,7 @@ namespace HostelManagementApp
                 r.Status = false;
                 Customer.CheckoutDate = dt;
             }
+            context.Customers.Remove(Customer);
             context.SaveChanges();
             MessageBox.Show("Successful");
             ReLoadInRoom();

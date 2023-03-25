@@ -53,5 +53,14 @@ namespace HostelManagementApp
             MessageBox.Show("Successful");
             Reload();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HostelLocation hl = context.HostelLocations.FirstOrDefault(hl => hl.LocationId == Convert.ToInt32(txtLocationID.Text));
+            hl.LocationDetail = txtLocationDetail.Text;
+            context.SaveChanges();
+            MessageBox.Show("Successful");
+            Reload();
+        }
     }
 }

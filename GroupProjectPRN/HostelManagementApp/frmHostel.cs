@@ -30,7 +30,7 @@ namespace HostelManagementApp
                 button1.Click += click;
                 flowLayoutPanel1.Controls.Add(button1);
             }
-
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void frmHostel_Load(object sender, EventArgs e)

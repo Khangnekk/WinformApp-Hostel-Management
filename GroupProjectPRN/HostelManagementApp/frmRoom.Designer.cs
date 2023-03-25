@@ -31,12 +31,12 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
+            txtType = new TextBox();
+            txtRoomNum = new TextBox();
+            txtPrice = new TextBox();
+            txtRoomID = new TextBox();
             label8 = new Label();
-            textBox1 = new TextBox();
+            txtStatus = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label3 = new Label();
@@ -76,6 +76,7 @@
             button2.TabIndex = 50;
             button2.Text = "Edit";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -85,35 +86,37 @@
             button1.TabIndex = 51;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox6
+            // txtType
             // 
-            textBox6.Location = new Point(838, 279);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(343, 27);
-            textBox6.TabIndex = 44;
+            txtType.Enabled = false;
+            txtType.Location = new Point(838, 279);
+            txtType.Name = "txtType";
+            txtType.Size = new Size(343, 27);
+            txtType.TabIndex = 44;
             // 
-            // textBox5
+            // txtRoomNum
             // 
-            textBox5.Location = new Point(838, 218);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(343, 27);
-            textBox5.TabIndex = 45;
+            txtRoomNum.Location = new Point(838, 218);
+            txtRoomNum.Name = "txtRoomNum";
+            txtRoomNum.Size = new Size(343, 27);
+            txtRoomNum.TabIndex = 45;
             // 
-            // textBox2
+            // txtPrice
             // 
-            textBox2.Location = new Point(836, 395);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(343, 27);
-            textBox2.TabIndex = 46;
+            txtPrice.Location = new Point(836, 395);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(343, 27);
+            txtPrice.TabIndex = 46;
             // 
-            // textBox4
+            // txtRoomID
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(835, 157);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(343, 27);
-            textBox4.TabIndex = 48;
+            txtRoomID.Enabled = false;
+            txtRoomID.Location = new Point(835, 157);
+            txtRoomID.Name = "txtRoomID";
+            txtRoomID.Size = new Size(343, 27);
+            txtRoomID.TabIndex = 48;
             // 
             // label8
             // 
@@ -126,12 +129,13 @@
             label8.TabIndex = 39;
             label8.Text = "Room Type";
             // 
-            // textBox1
+            // txtStatus
             // 
-            textBox1.Location = new Point(836, 340);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(343, 27);
-            textBox1.TabIndex = 47;
+            txtStatus.Enabled = false;
+            txtStatus.Location = new Point(836, 340);
+            txtStatus.Name = "txtStatus";
+            txtStatus.Size = new Size(343, 27);
+            txtStatus.TabIndex = 47;
             // 
             // label7
             // 
@@ -186,6 +190,7 @@
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.Size = new Size(760, 562);
             dataGridView2.TabIndex = 35;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // dataGridView1
             // 
@@ -196,6 +201,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(760, 562);
             dataGridView1.TabIndex = 36;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label4
             // 
@@ -231,11 +237,12 @@
             // 
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(17, 31);
+            dataGridView3.Location = new Point(15, 31);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.Size = new Size(760, 562);
             dataGridView3.TabIndex = 35;
+            dataGridView3.CellClick += dataGridView3_CellClick;
             // 
             // menuStrip1
             // 
@@ -285,12 +292,12 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox2);
-            Controls.Add(textBox4);
+            Controls.Add(txtType);
+            Controls.Add(txtRoomNum);
+            Controls.Add(txtPrice);
+            Controls.Add(txtRoomID);
             Controls.Add(label8);
-            Controls.Add(textBox1);
+            Controls.Add(txtStatus);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label3);
@@ -317,12 +324,12 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox2;
-        private TextBox textBox4;
+        private TextBox txtType;
+        private TextBox txtRoomNum;
+        private TextBox txtPrice;
+        private TextBox txtRoomID;
         private Label label8;
-        private TextBox textBox1;
+        private TextBox txtStatus;
         private Label label7;
         private Label label6;
         private Label label3;
