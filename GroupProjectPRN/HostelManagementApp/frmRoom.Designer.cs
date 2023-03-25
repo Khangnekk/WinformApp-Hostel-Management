@@ -64,8 +64,9 @@
             button3.Name = "button3";
             button3.Size = new Size(343, 39);
             button3.TabIndex = 49;
-            button3.Text = "Delete";
+            button3.Text = "Create bill";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 

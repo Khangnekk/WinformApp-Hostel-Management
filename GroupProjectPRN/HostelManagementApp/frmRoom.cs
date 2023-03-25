@@ -77,5 +77,11 @@ namespace HostelManagementApp
             rented.BackColor = Color.White;
             empty.BackColor = Color.White;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmBill frmBill = new frmBill();
+            frmBill.ShowDialog();
+        }
     }
 }

@@ -32,16 +32,14 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            txtFullName = new TextBox();
+            txtPhone = new TextBox();
+            txtPlace = new TextBox();
+            txtCCCD = new TextBox();
+            dateTimePickerCheckIn = new DateTimePicker();
+            dateTimePickerCheckOut = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -51,10 +49,12 @@
             label10 = new Label();
             cbRoom = new ComboBox();
             groupBox1 = new GroupBox();
+            lbRoomID = new Label();
             lbPrice = new Label();
             lbType = new Label();
             lbStatus = new Label();
             lbRoomNum = new Label();
+            label5 = new Label();
             dataGridView2 = new DataGridView();
             label13 = new Label();
             label12 = new Label();
@@ -62,6 +62,8 @@
             label8 = new Label();
             label14 = new Label();
             cbType = new ComboBox();
+            label15 = new Label();
+            txtCustomerID = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -106,21 +108,11 @@
             label4.TabIndex = 1;
             label4.Text = "CCCD";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(921, 330);
-            label5.Name = "label5";
-            label5.Size = new Size(65, 28);
-            label5.TabIndex = 1;
-            label5.Text = "Room";
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(921, 391);
+            label6.Location = new Point(921, 326);
             label6.Name = "label6";
             label6.Size = new Size(91, 28);
             label6.TabIndex = 1;
@@ -130,61 +122,54 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(921, 457);
+            label7.Location = new Point(921, 392);
             label7.Name = "label7";
             label7.Size = new Size(105, 28);
             label7.TabIndex = 1;
             label7.Text = "Check-out";
             // 
-            // textBox1
+            // txtFullName
             // 
-            textBox1.Location = new Point(921, 118);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(347, 27);
-            textBox1.TabIndex = 2;
+            txtFullName.Location = new Point(921, 118);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(347, 27);
+            txtFullName.TabIndex = 2;
             // 
-            // textBox2
+            // txtPhone
             // 
-            textBox2.Location = new Point(921, 178);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(347, 27);
-            textBox2.TabIndex = 2;
+            txtPhone.Location = new Point(921, 178);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(347, 27);
+            txtPhone.TabIndex = 2;
             // 
-            // textBox3
+            // txtPlace
             // 
-            textBox3.Location = new Point(921, 232);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(347, 27);
-            textBox3.TabIndex = 2;
+            txtPlace.Location = new Point(921, 232);
+            txtPlace.Name = "txtPlace";
+            txtPlace.Size = new Size(347, 27);
+            txtPlace.TabIndex = 2;
             // 
-            // textBox4
+            // txtCCCD
             // 
-            textBox4.Location = new Point(921, 296);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(347, 27);
-            textBox4.TabIndex = 2;
+            txtCCCD.Location = new Point(921, 296);
+            txtCCCD.Name = "txtCCCD";
+            txtCCCD.Size = new Size(347, 27);
+            txtCCCD.TabIndex = 2;
             // 
-            // textBox5
+            // dateTimePickerCheckIn
             // 
-            textBox5.Location = new Point(921, 361);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(347, 27);
-            textBox5.TabIndex = 2;
+            dateTimePickerCheckIn.Location = new Point(921, 362);
+            dateTimePickerCheckIn.Name = "dateTimePickerCheckIn";
+            dateTimePickerCheckIn.Size = new Size(347, 27);
+            dateTimePickerCheckIn.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateTimePickerCheckOut
             // 
-            dateTimePicker1.Location = new Point(921, 427);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(347, 27);
-            dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Enabled = false;
-            dateTimePicker2.Location = new Point(921, 498);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(241, 27);
-            dateTimePicker2.TabIndex = 3;
+            dateTimePickerCheckOut.Enabled = false;
+            dateTimePickerCheckOut.Location = new Point(921, 433);
+            dateTimePickerCheckOut.Name = "dateTimePickerCheckOut";
+            dateTimePickerCheckOut.Size = new Size(241, 27);
+            dateTimePickerCheckOut.TabIndex = 3;
             // 
             // button1
             // 
@@ -194,6 +179,7 @@
             button1.TabIndex = 4;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -203,6 +189,7 @@
             button2.TabIndex = 4;
             button2.Text = "Edit";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -210,12 +197,13 @@
             button3.Name = "button3";
             button3.Size = new Size(347, 39);
             button3.TabIndex = 4;
-            button3.Text = "Delete";
+            button3.Text = "Check out";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(1168, 494);
+            button4.Location = new Point(1168, 429);
             button4.Name = "button4";
             button4.Size = new Size(108, 31);
             button4.TabIndex = 4;
@@ -263,10 +251,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lbRoomID);
             groupBox1.Controls.Add(lbPrice);
             groupBox1.Controls.Add(lbType);
             groupBox1.Controls.Add(lbStatus);
             groupBox1.Controls.Add(lbRoomNum);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(dataGridView2);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(label12);
@@ -279,11 +269,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Room Information";
             // 
+            // lbRoomID
+            // 
+            lbRoomID.AutoSize = true;
+            lbRoomID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbRoomID.Location = new Point(656, 53);
+            lbRoomID.Name = "lbRoomID";
+            lbRoomID.Size = new Size(36, 28);
+            lbRoomID.TabIndex = 56;
+            lbRoomID.Text = "---";
+            lbRoomID.Click += label15_Click;
+            // 
             // lbPrice
             // 
             lbPrice.AutoSize = true;
             lbPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbPrice.Location = new Point(407, 92);
+            lbPrice.Location = new Point(407, 102);
             lbPrice.Name = "lbPrice";
             lbPrice.Size = new Size(36, 28);
             lbPrice.TabIndex = 56;
@@ -293,7 +294,7 @@
             // 
             lbType.AutoSize = true;
             lbType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbType.Location = new Point(128, 92);
+            lbType.Location = new Point(128, 102);
             lbType.Name = "lbType";
             lbType.Size = new Size(36, 28);
             lbType.TabIndex = 56;
@@ -303,7 +304,7 @@
             // 
             lbStatus.AutoSize = true;
             lbStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbStatus.Location = new Point(418, 49);
+            lbStatus.Location = new Point(418, 53);
             lbStatus.Name = "lbStatus";
             lbStatus.Size = new Size(36, 28);
             lbStatus.TabIndex = 56;
@@ -313,14 +314,25 @@
             // 
             lbRoomNum.AutoSize = true;
             lbRoomNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbRoomNum.Location = new Point(158, 51);
+            lbRoomNum.Location = new Point(158, 55);
             lbRoomNum.Name = "lbRoomNum";
             lbRoomNum.Size = new Size(36, 28);
             lbRoomNum.TabIndex = 56;
             lbRoomNum.Text = "---";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(562, 53);
+            label5.Name = "label5";
+            label5.Size = new Size(96, 28);
+            label5.TabIndex = 1;
+            label5.Text = "Room ID:";
+            // 
             // dataGridView2
             // 
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Location = new Point(6, 178);
             dataGridView2.Name = "dataGridView2";
@@ -328,12 +340,13 @@
             dataGridView2.RowTemplate.Height = 29;
             dataGridView2.Size = new Size(844, 358);
             dataGridView2.TabIndex = 55;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(340, 92);
+            label13.Location = new Point(340, 102);
             label13.Name = "label13";
             label13.Size = new Size(61, 28);
             label13.TabIndex = 1;
@@ -343,7 +356,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(340, 51);
+            label12.Location = new Point(340, 55);
             label12.Name = "label12";
             label12.Size = new Size(72, 28);
             label12.TabIndex = 1;
@@ -353,7 +366,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(6, 92);
+            label11.Location = new Point(6, 102);
             label11.Name = "label11";
             label11.Size = new Size(116, 28);
             label11.TabIndex = 1;
@@ -363,7 +376,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(6, 51);
+            label8.Location = new Point(6, 55);
             label8.Name = "label8";
             label8.Size = new Size(152, 28);
             label8.TabIndex = 1;
@@ -389,6 +402,24 @@
             cbType.TabIndex = 54;
             cbType.SelectedIndexChanged += cbType_SelectedIndexChanged;
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(921, 33);
+            label15.Name = "label15";
+            label15.Size = new Size(126, 28);
+            label15.TabIndex = 1;
+            label15.Text = "Customer ID";
+            // 
+            // txtCustomerID
+            // 
+            txtCustomerID.Enabled = false;
+            txtCustomerID.Location = new Point(921, 64);
+            txtCustomerID.Name = "txtCustomerID";
+            txtCustomerID.Size = new Size(347, 27);
+            txtCustomerID.TabIndex = 2;
+            // 
             // frmCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -405,18 +436,18 @@
             Controls.Add(button2);
             Controls.Add(button4);
             Controls.Add(button1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(dateTimePickerCheckOut);
+            Controls.Add(dateTimePickerCheckIn);
+            Controls.Add(txtCCCD);
+            Controls.Add(txtPlace);
+            Controls.Add(txtPhone);
+            Controls.Add(txtCustomerID);
+            Controls.Add(txtFullName);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
+            Controls.Add(label15);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmCustomer";
@@ -435,16 +466,14 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private TextBox txtFullName;
+        private TextBox txtPhone;
+        private TextBox txtPlace;
+        private TextBox txtCCCD;
+        private DateTimePicker dateTimePickerCheckIn;
+        private DateTimePicker dateTimePickerCheckOut;
         private Label label8;
         private TextBox textBox6;
         private Button button1;
@@ -466,5 +495,9 @@
         private Label label11;
         private Label label14;
         private ComboBox cbType;
+        private Label lbRoomID;
+        private Label label5;
+        private Label label15;
+        private TextBox txtCustomerID;
     }
 }
